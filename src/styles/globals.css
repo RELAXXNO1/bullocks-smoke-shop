@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-tap-highlight-color: transparent;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply antialiased text-smoke-900 bg-smoke-50;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center px-4 py-2 text-sm font-medium transition-colors rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2;
+  }
+
+  .btn-primary {
+    @apply text-white bg-accent-600 hover:bg-accent-700 focus:ring-accent-500;
+  }
+
+  .btn-secondary {
+    @apply text-smoke-700 bg-smoke-100 hover:bg-smoke-200 focus:ring-smoke-500;
+  }
+
+  .input {
+    @apply block w-full px-3 py-2 text-sm border-smoke-300 rounded-lg shadow-sm focus:ring-accent-500 focus:border-accent-500;
+  }
+
+  .card {
+    @apply overflow-hidden bg-white rounded-xl shadow-soft;
+  }
+
+  .nav-link {
+    @apply inline-flex items-center px-3 py-2 text-sm font-medium text-smoke-700 transition-colors rounded-lg hover:bg-smoke-100 hover:text-smoke-900;
+  }
+
+  .nav-link-active {
+    @apply text-accent-700 bg-accent-50 hover:bg-accent-100;
+  }
+}
+
+/* Custom animations */
+.fade-enter {
+  opacity: 0;
+}
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 200ms ease-in;
+}
+.fade-exit {
+  opacity: 1;
+}
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 200ms ease-in;
+}
+
+/* Smooth scrolling for anchor links */
+html {
+  scroll-padding-top: 80px;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-smoke-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-smoke-300 rounded-full hover:bg-smoke-400;
+}
+
+/* Loading skeleton pulse animation */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: .5;
+  }
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
