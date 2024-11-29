@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import LoadingSkeleton from '../../components/LoadingSkeleton';
+import LoadingSkeleton from '../components/common/LoadingSkeleton';
 import { motion } from 'framer-motion';
 
 export default function Contact() {
