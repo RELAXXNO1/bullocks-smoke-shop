@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { useStaticContent } from '../../hooks/useStaticContent';
+import useStaticContent from "../hooks/useStaticContent";
 import LoadingSkeleton from '../../components/LoadingSkeleton';
 import { motion } from 'framer-motion';
 
